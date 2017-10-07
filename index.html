@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <style = "text/css">
+      #app {
+      }
+
+      .cell-row {
+        clear: both;
+      }
+
+      .controls {
+        padding: 1em, 0, 1em, 0;
+        margin: 1em, 0, 1em, 0;
+        clear: both;
+      }
+
+      .life-cell {
+        float: left;
+        width: 3px;
+        height: 3px;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .life-cell.alive {
+        background-color: #333;
+      }
+
+      .life-cell.dead {
+      }
+
+      .life-button {
+        clear: both;
+      }
+
+      #cell-state {
+        clear: both;
+        width: 50em;
+        height: 10em;
+        border: 1px solid #999;
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div v-html="message" >{{ message }}</div>
+      <div class="controls">
+        <button class="life-button" v-on:click="fate">Cycle</button>
+        <button class="life-button" id="playToggle" v-on:click="play">{{ playToggle }}</button>
+        <button class="life-button" v-on:click="state">State</button>
+      </div>
+      <div class="cycles" v-html="cycles" >{{ cycles }}</div>
+      <textarea id="cell-state" v-model="cellState">{{ cellState }}"</textarea>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="/js/life.js"></script>
+    <script src="/js/runtime.js"></script>
+  </body>
+</html>
