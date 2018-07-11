@@ -40,3 +40,6 @@ There is still much I would like to add given more time.
 - Explore Vue.js a little more to better utilize the bindings instead of just writing the DOM classes.
 - Improve browser compatibility.
 - Create an option to not wrap the cell edges, or expand the board maybe.
+
+## Some header
+- Some thing
